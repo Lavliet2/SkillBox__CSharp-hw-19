@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Homework_19_2.Models.Contact>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Страница Home</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h2>Телефонная книга</h2>
+
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+        </tr>
+        @if (Model != null)
+        {
+            @foreach (var contact in Model)
+            {
+                <tr>
+                    <td><a href="@Url.Action("Details", "Home", new { id = contact.ID })">@contact.ID</a></td>
+                    <td>@contact.LastName</td>
+                    <td>@contact.FirstName</td>
+                    <td>@contact.MiddleName</td>
+                </tr>
+            }
+        }
+    </table>
+</body>
+</html>

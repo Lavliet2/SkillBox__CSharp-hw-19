@@ -1,0 +1,37 @@
+﻿@model Homework_19_2.Models.Contact
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Детали контакта</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Детали контакта</h2>
+        <dl class="row">
+            <dt class="col-sm-2">ID</dt>
+            <dd class="col-sm-10">@Model.ID</dd>
+
+            <dt class="col-sm-2">Фамилия</dt>
+            <dd class="col-sm-10">@Model.LastName</dd>
+
+            <dt class="col-sm-2">Имя</dt>
+            <dd class="col-sm-10">@Model.FirstName</dd>
+
+            <dt class="col-sm-2">Отчество</dt>
+            <dd class="col-sm-10">@Model.MiddleName</dd>
+
+            <dt class="col-sm-2">Номер телефона</dt>
+            <dd class="col-sm-10">@Model.PhoneNumber</dd>
+
+            <dt class="col-sm-2">Адрес</dt>
+            <dd class="col-sm-10">@Model.Address</dd>
+
+            <dt class="col-sm-2">Описание</dt>
+            <dd class="col-sm-10">@Model.Description</dd>
+        </dl>
+    </div>
+</body>
+</html>
